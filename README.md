@@ -1,7 +1,7 @@
 # Context-Aware-Retrieval-Engine-
 Mocking: Mock the vertexai.language_models.TextEmbeddingModel and GenerativeModel for the query expansion phase.
 
-Instead of using any pretrained model for creating query expand, i have created own or local python function or model which is expand the query as per your instruction, which is mension in document. I have created mock model of GenerativeModel and TextEmbeddingModel. This all for only Strategy B.
+Instead of using any pretrained model for creating query expansions, I have created my own or local python function or model which expands the query as per your instruction, which is mentioned in the document. I have created a mock model of GenerativeModel and TextEmbeddingModel. This all for only Strategy B.
 
 
 set up = (Follow the 3 step)

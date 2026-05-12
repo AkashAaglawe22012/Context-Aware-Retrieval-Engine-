@@ -1,0 +1,14 @@
+ 1. Explain the choice of similarity metric (Cosine vs. Euclidean) ->
+
+ I used Euclidean distance for similarity search because the FAISS index in this project is based on IndexFlatL2. 
+ This method retrieves vectors by measuring the direct numerical distance between the query embedding and stored embeddings. 
+ The chunks with the smallest distance are considered the most relevant. Euclidean distance is simple and efficient for vector retrieval, 
+ although cosine similarity is often preferred in semantic NLP tasks because it focuses more on contextual similarity between embeddings.
+
+2. how you would migrate this to Vertex AI Vector Search (Matching Engine) in production ->
+
+The current implementation uses FAISS as a local vector store for semantic retrieval. In a production environment, 
+this can be migrated to Vertex AI Vector Search by moving the embedding storage and similarity search 
+infrastructure to Google Cloud. Document embeddings would be indexed in Vertex AI Vector Search, enabling scalable, 
+low-latency, and distributed semantic retrieval across large datasets. The overall RAG pipeline and embedding workflow would 
+remain the same, while the retrieval layer becomes more reliable and production-ready for enterprise-scale applications.
